@@ -17,11 +17,13 @@ hero:
 features:
   - icon: 🛠️                          
     title: 目标一                       
-    details: 程序员的系统教程             
+    details: 当好螺丝钉
+    link: /guide/what-is-vitepress
     linkText: more
   - icon: 🛏️
     title: 目标二
-    details: 阻止病房暴动
+    details: 病房暴动
+    link: https://www.bilibili.com/video/BV1iA411G7SU/?spm_id_from=333.788&vd_source=e36103031144dca10ac67f24e861ac18
     linkText: more
   - icon: 🌟
     title: 目标三
