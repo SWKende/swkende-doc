@@ -6,10 +6,10 @@ export default [
     items: [
       {
         text: "HTML",
-        link: "/博客/HTML/index",
         activeMatch: "/博客/HTML/",
+        link: "/博客/HTML/index",
       },
-      { text: "Vue", link: "/博客/Vue/index", activeMatch: "/博客/Vue/" },
+      { text: "Vue", activeMatch: "/博客/Vue/", link: "/博客/Vue/index" },
     ],
   },
   { text: "学习记录", activeMatch: "/学习记录/", link: "/学习记录/index" },

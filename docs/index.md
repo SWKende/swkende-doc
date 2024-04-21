@@ -8,14 +8,14 @@ hero:
   tagline: ————  弱智吧
   image: 
     src: /home-icon.png
-    alt: VitePress
+    alt: 背景图
   actions:
     - theme: brand
-      text: 建站教程
+      text: 建站教程视频
       link: https://www.bilibili.com/list/watchlater?oid=966018174&bvid=BV1XW4y1w7bc&spm_id_from=333.1007.top_right_bar_window_view_later.content.click
     - theme: alt
-      text: 官方网站
-      link: https://vitepress.dev/zh/
+      text: 建站教程doc
+      link: https://docs.bugdesigner.cn/
 
 features:
   - icon: 🛠️                          
