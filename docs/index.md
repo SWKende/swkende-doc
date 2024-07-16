@@ -3,10 +3,10 @@
 layout: home
 
 hero:
-  name: "于暴雨中行走"
-  text: "伞是倒划天空的船"
-  tagline: ————  弱智吧
-  image: 
+  name: "SWKende的文档站"
+  text: "于暴雨中行走"
+  tagline: 伞是倒划天空的船
+  image:
     src: /home-icon.png
     alt: 背景图
   actions:
@@ -18,8 +18,8 @@ hero:
       link: https://docs.bugdesigner.cn/
 
 features:
-  - icon: 🛠️                          
-    title: 目标一                       
+  - icon: 🛠️
+    title: 目标一
     details: 当好螺丝钉
     link: /guide/what-is-vitepress
     linkText: more
@@ -31,5 +31,6 @@ features:
   - icon: 🌟
     title: 目标三
     details: 开发独立游戏
+    link: /guide/what-is-vitepress
     linkText: more
 ---
