@@ -1,30 +1,31 @@
-# 学习记录
+# npm 相关
+
+### npm 换源
+
+```zsh
+#查看当前的源
+npm config get registry
+#将 npm 源替换成 cnpm
+npm config set registry http://registry.npmmirror.com
+#恢复成原来的源
+npm config set registry https://registry.npmjs.org
+```
 
 ### 修改 cpu 编译
 
-检查当前 node 架构：
-
 ```zsh
+#检查当前 node 架构：
 node -p process.arch
-```
-
-启动一个 x86 新的 zsh 进程：
-
-```zsh
+#启动一个 x86 新的 zsh 进程：
 arch -x86_64 zsh
-```
-
-退出这个进程：
-
-```zsh
+#退出这个进程：
 exit
 ```
 
 ### yarn install 报错（Expected version “8 || 10 || 12 || 14 || 16 || 17”. Got "18.16.0”）
 
-自动补充兼容，命令行输入
-
 ```zsh
+#自动补充兼容，命令行输入
 yarn config set ignore-engines true
 ```
 

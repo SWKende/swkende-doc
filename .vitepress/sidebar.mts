@@ -16,10 +16,18 @@ export default {
       ],
     },
   ],
-  "/学习记录/": [
+  "/杂项/": [
     {
-      text: "学习记录",
-      link: "/学习记录/index",
+      text: "npm",
+      link: "/杂项/npm",
+    },
+    {
+      text: "刷机",
+      link: "/杂项/刷机",
+    },
+    {
+      text: "杂项",
+      link: "/杂项/index",
     },
   ],
 };

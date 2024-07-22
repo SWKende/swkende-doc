@@ -12,6 +12,6 @@ export default [
       { text: "Vue", activeMatch: "/博客/Vue/", link: "/博客/Vue/index" },
     ],
   },
-  { text: "学习记录", activeMatch: "/学习记录/", link: "/学习记录/index" },
+  { text: "杂项", activeMatch: "/杂项/", link: "/杂项/index" },
   // { text: "百度", link: "https://www.baidu.com/", target: "_self" },
 ];
