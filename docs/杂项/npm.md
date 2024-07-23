@@ -1,5 +1,29 @@
 # npm 相关
 
+## 发布遇到的一些问题
+
+```zsh
+# 登陆 npm
+npm login
+# 发布包
+npm publish
+```
+
+### 包名过于类似
+
+```zsh
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/v-formdesigner - Package name too similar to existing package v-form-designer; try renaming your package to '@klaus_v_reinherz/v-formdesigner' and publishing with 'npm publish --access=public' instead
+```
+
+这里需要在 **_package.json_** 中修改包名，如果包名是这种结构@your-name/your-package<br>
+那么发布的时候，用这个命令<br>
+
+```zsh
+npm publish --access public
+```
+
+## 杂项
+
 ### npm 换源
 
 ```zsh
@@ -29,7 +53,7 @@ exit
 yarn config set ignore-engines true
 ```
 
-### 添加 yarn 的环境变量
+### macos 添加 yarn 的环境变量
 
 查找 yarn global 的安装目录
 

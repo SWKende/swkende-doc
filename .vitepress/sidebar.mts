@@ -18,16 +18,16 @@ export default {
   ],
   "/杂项/": [
     {
+      text: "杂项",
+      link: "/杂项/index",
+    },
+    {
       text: "npm",
       link: "/杂项/npm",
     },
     {
       text: "刷机",
       link: "/杂项/刷机",
-    },
-    {
-      text: "杂项",
-      link: "/杂项/index",
     },
   ],
 };
