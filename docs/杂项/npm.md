@@ -1,27 +1,5 @@
 # npm 相关
 
-## 发布遇到的一些问题
-
-```zsh
-# 登陆 npm
-npm login
-# 发布包
-npm publish
-```
-
-### 包名过于类似
-
-```zsh
-npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/v-formdesigner - Package name too similar to existing package v-form-designer; try renaming your package to '@klaus_v_reinherz/v-formdesigner' and publishing with 'npm publish --access=public' instead
-```
-
-这里需要在 **_package.json_** 中修改包名，如果包名是这种结构@your-name/your-package<br>
-那么发布的时候，用这个命令<br>
-
-```zsh
-npm publish --access public
-```
-
 ## 杂项
 
 ### npm 换源
@@ -93,4 +71,52 @@ vim ~/.zshrc
 
 ```zsh
 source ~/.bash_profile
+```
+
+## nvm 指令
+
+安装 nvm 之后
+
+```zsh
+#查看当前版本
+nvm --version
+```
+
+nvm 指令
+
+```zsh
+nvm ls #打印出所有的版本 install stable：安装最稳定的版本
+nvm install v8.9.2 # 安装node的8.9.2的版本（删除用uninstall）
+nvm current #当前使用的node版本
+nvm use v8.9.2 #将node改为8.9.2版本
+nvm alias default 0.12.7 #设置默认 node 版本为 0.12.7
+nvm alias default #设置系统默认的node版本
+nvm alias  #给不同的版本号添加别名
+nvm unalias  # 删除已定义的别名
+nvm reinstall-packages #在当前版本node环境下，重新全局安装指定版本号的npm包
+npm install -g mz-fis #安装 mz-fis 模块至全局目录，安装的路径：/Users/<你的用户名>/.nvm/versions/node/v0.12.7/lib/mz-fis
+nvm use 4 #切换至 4.2.2 版本（支持模糊查询）
+npm install -g react-native-cli #安装 react-native-cli 模块至全局目录，安装的路径：/Users/<你的用户名>/.nvm/versions/node/v4.2.2/lib/react-native-cli
+```
+
+## 发布遇到的一些问题
+
+```zsh
+# 登陆 npm
+npm login
+# 发布包
+npm publish
+```
+
+### 包名过于类似
+
+```zsh
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/v-formdesigner - Package name too similar to existing package v-form-designer; try renaming your package to '@klaus_v_reinherz/v-formdesigner' and publishing with 'npm publish --access=public' instead
+```
+
+这里需要在 **_package.json_** 中修改包名，如果包名是这种结构@your-name/your-package<br>
+那么发布的时候，用这个命令<br>
+
+```zsh
+npm publish --access public
 ```
