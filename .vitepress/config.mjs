@@ -17,7 +17,10 @@ export default defineConfig({
     outline: [2, 6],
     nav,
     sidebar,
-    // sidebar: { "/docs/博客": set_sidebar("/docs/博客") },
+    // sidebar: {
+    //   "/博客": set_sidebar("docs/博客"),
+    //   "/其他": set_sidebar("docs/其他"),
+    // },
     // sidebar: false, // 关闭侧边栏
     socialLinks: [{ icon: "github", link: "https://github.com/SWKende" }],
     // 设置搜索框的样式

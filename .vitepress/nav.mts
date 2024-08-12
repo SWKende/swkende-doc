@@ -13,5 +13,5 @@ export default [
     ],
   },
   { text: "杂项", activeMatch: "/杂项/", link: "/杂项/index" },
-  // { text: "百度", link: "https://www.baidu.com/", target: "_self" },
+  { text: "掘金", link: "https://juejin.cn/" },
 ];
