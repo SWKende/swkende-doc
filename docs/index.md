@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 建站教程doc
       link: https://docs.bugdesigner.cn/
+    - theme: alt
+      text: 第三方vitepress文档
+      link: https://vitepress.yiov.top/
 
 features:
   - icon: 🛠️
