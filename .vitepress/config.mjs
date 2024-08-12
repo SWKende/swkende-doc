@@ -1,7 +1,6 @@
 import { defineConfig } from "vitepress";
 import nav from "./nav.mjs";
-import sidebar from "./sidebar.mjs";
-import { set_sidebar } from "./utils/auto_sidebar.mjs"; // 改成自己的路径
+import AutoSidebarPlugin from "vitepress-auto-sidebar-plugin";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -16,12 +15,6 @@ export default defineConfig({
     outlineTitle: "目录",
     outline: [2, 6],
     nav,
-    sidebar,
-    // sidebar: {
-    //   "/博客": set_sidebar("docs/博客"),
-    //   "/其他": set_sidebar("docs/其他"),
-    // },
-    // sidebar: false, // 关闭侧边栏
     socialLinks: [{ icon: "github", link: "https://github.com/SWKende" }],
     // 设置搜索框的样式
     search: {
@@ -43,5 +36,14 @@ export default defineConfig({
         },
       },
     },
+  },
+  vite: {
+    plugins: [
+      AutoSidebarPlugin({
+        // 如果不指定 `srcDir`，则默认使用 `vitepress` 的 `srcDir`
+        srcDir: "./docs",
+        sort: (a, b) => a.text.localeCompare(b.text),
+      }),
+    ],
   },
 });
