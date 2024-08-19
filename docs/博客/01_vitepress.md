@@ -1,4 +1,4 @@
-# 🗒️GitHub + VitePress，我的在线笔记本 📔
+# 📔GitHub + VitePress，或许是你做笔记的新路子
 
 ::: info 前言
 为什么我开始转入 VitePress，主要是因为好玩，一直想搭建一个个人博客，稍微了解了一下 VitePress 就狠狠的爱上了，实在是太简便太舒服了
