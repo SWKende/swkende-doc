@@ -40,7 +40,7 @@ jobs:
         run: pnpm install # 安装依赖
       - name: Build with VitePress
         run: |
-          pnpm run docs:build # 启动项目
+          pnpm docs:build # 启动项目
           touch .nojekyll  # 通知githubpages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2 # 上传构建产物

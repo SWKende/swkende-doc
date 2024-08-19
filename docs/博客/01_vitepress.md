@@ -62,7 +62,19 @@ npx vitepress init
 ```
 
 :::
-此时你的目录应该是这样的
+此时你的目录应该是这样的，少加了`.gitignore`，记得手动加上
+::: details .gitignore
+```
+node_modules
+.DS_Store
+dist
+dist-ssr
+cache
+.cache
+.temp
+*.local
+```
+:::
 ![初始化vitepress](/public/初始化vitepress.png)
 
 ### 部署到 GitHub
@@ -71,7 +83,7 @@ npx vitepress init
 ::: tip 提示
 在此之前，可以先看看[GitHub Actions 工作流自动化的入门核心](https://www.bilibili.com/video/BV1aT421y7Ar/?vd_source=e36103031144dca10ac67f24e861ac18)这个视频，有助于理解接下来的代码
 <br>
-当然，我是从 vitepress 官网直接复制的，嘿嘿嘿
+官网中也有相关配置，这里是修改后的，以便于直接复制就能部署
 :::
 
 ```yaml
