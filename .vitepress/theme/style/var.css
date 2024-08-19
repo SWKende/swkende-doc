@@ -3,6 +3,7 @@
   --vp-c-brand-1: #18794e;
   --vp-c-brand-2: #299764;
   --vp-c-brand-3: #30a46c;
+  --vp-custom-block-tip-bg: var(--vp-c-green-soft);
 }
 
 .dark {
@@ -42,3 +43,21 @@
   
     --vp-button-brand-active-border: #F6CEEC;
   } */
+
+
+  /* 提示框 */
+.custom-block.tip {
+  border-color: var(--vp-c-green-2);
+}
+
+/* 警告框 */
+.custom-block.warning {
+  /* border-color: #d97706; */
+  border-color: var(--vp-c-yellow-2);
+}
+
+/* 危险框 */
+.custom-block.danger {
+  /* border-color: #f43f5e; */
+  border-color: var(--vp-c-red-2);
+}

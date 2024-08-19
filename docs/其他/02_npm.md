@@ -4,21 +4,21 @@
 
 ### 登陆以及发布
 
-```zsh
+```sh
 npm login # 登陆 npm
 npm publish # 发布包
 ```
 
 ### 包名过于类似
 
-```zsh
+```sh
 npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/v-formdesigner - Package name too similar to existing package v-form-designer; try renaming your package to '@klaus_v_reinherz/v-formdesigner' and publishing with 'npm publish --access=public' instead
 ```
 
 这里需要在 **_package.json_** 中修改包名，如果包名是这种结构@your-name/your-package<br>
 那么发布的时候，用这个命令<br>
 
-```zsh
+```sh
 npm publish --access public
 ```
 
@@ -26,7 +26,7 @@ npm publish --access public
 
 ### npm 换源
 
-```zsh
+```sh
 #查看当前的源
 npm config get registry
 #将 npm 源替换成 cnpm
@@ -37,7 +37,7 @@ npm config set registry https://registry.npmjs.org
 
 ### 修改 cpu 编译
 
-```zsh
+```sh
 #检查当前 node 架构：
 node -p process.arch
 #启动一个 x86 新的 zsh 进程：
@@ -48,7 +48,7 @@ exit
 
 ### yarn install 报错（Expected version “8 || 10 || 12 || 14 || 16 || 17”. Got "18.16.0”）
 
-```zsh
+```sh
 #自动补充兼容，命令行输入
 yarn config set ignore-engines true
 ```
@@ -57,7 +57,7 @@ yarn config set ignore-engines true
 
 查找 yarn global 的安装目录
 
-```zsh
+```sh
 yarn global dir
 #比如找到的路径如下
 /Users/username/.config/yarn/global/node_modules/.bin
@@ -66,32 +66,32 @@ yarn global dir
 
 修改~/.bash_profile
 
-```zsh
+```sh
 vim ~/.bash_profi
 ```
 
 加一行代码
 
-```zsh
+```sh
 export PATH="$PATH:/Users/username/.config/yarn/global/node_modules/.bin"
 ```
 
 加完之后再执行
 
-```zsh
+```sh
 source ~/.bash_profile
 ```
 
 但是关掉终端之后，又失效了，原因是 zsh 加载的是 ~/.zshrc 文件，而 ‘.zshrc’ 文件中并没有定义任务环境变量。否则每次都要执行 source ~/.bash_profile
 解决办法，修改~/.zshrc
 
-```zsh
+```sh
 vim ~/.zshrc
 ```
 
 加一行代码
 
-```zsh
+```sh
 source ~/.bash_profile
 ```
 
@@ -99,14 +99,14 @@ source ~/.bash_profile
 
 安装 nvm 之后
 
-```zsh
+```sh
 #查看当前版本
 nvm --version
 ```
 
 nvm 指令
 
-```zsh
+```sh
 nvm ls #打印出所有的版本 install stable：安装最稳定的版本
 nvm install v8.9.2 # 安装node的8.9.2的版本（删除用uninstall）
 nvm current #当前使用的node版本
