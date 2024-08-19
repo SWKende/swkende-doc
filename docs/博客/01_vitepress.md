@@ -5,7 +5,7 @@
 <br>
 还能结合 GitHub，部署个人网站，入门门槛极低
 <br>
-身为 ~~熟练掌握~~ Vue的搬砖工，只要你愿意，你也能玩出花（PS：真的可以玩出花，[你看](https://vitepress.yiov.top/)）
+身为 ~~熟练掌握~~ Vue 的搬砖工，只要你愿意，你也能玩出花（PS：真的可以玩出花，[你看](https://vitepress.yiov.top/)）
 <br>
 本篇主要介绍搭建工作以及部分配置，不会着重介绍创建项目以及项目结构
 :::
@@ -62,8 +62,9 @@ npx vitepress init
 ```
 
 :::
-此时你的目录应该是这样的，少加了`.gitignore`，记得手动加上
+此时你的目录应该是这样的，这里少加了`.gitignore`，记得手动加上
 ::: details .gitignore
+
 ```
 node_modules
 .DS_Store
@@ -74,6 +75,7 @@ cache
 .temp
 *.local
 ```
+
 :::
 ![初始化vitepress](/public/初始化vitepress.png)
 
@@ -118,26 +120,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
-      # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2 # 安装pnpm并添加到环境变量
+        with:
+          version: 8.6.12 # 指定需要的 pnpm 版本
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
-          cache: npm # 或 pnpm / yarn
+          node-version: 18
+          cache: pnpm # 或 pnpm / yarn
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v3 # 在工作流程自动配置GithubPages
       - name: Install dependencies
-        run: npm ci # 或 pnpm install / yarn install / bun install
+        run: pnpm install # 或 pnpm install / yarn install / bun install
       - name: Build with VitePress
-        run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+        run: |
+          pnpm docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+          touch .nojekyll  # 通知githubpages不要使用Jekyll处理这个站点，不知道为啥不生效，就手动搞了
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: docs/.vitepress/dist
+          path: .vitepress/dist
 
   # 部署工作
   deploy:
@@ -150,5 +156,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
 ```
