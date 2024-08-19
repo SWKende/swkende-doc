@@ -5,9 +5,9 @@
 <br>
 还能结合 GitHub，部署个人网站，入门门槛极低
 <br>
-身为~~熟练掌握~~Vue 的搬砖员，只要你愿意，你能玩出花(PS:真的可以玩出花，[你看](https://vitepress.yiov.top/))
+身为 ~~熟练掌握~~ Vue的搬砖工，只要你愿意，你也能玩出花（PS：真的可以玩出花，[你看](https://vitepress.yiov.top/)）
 <br>
-主要介绍搭建工作以及部分配置，本篇不会着重介绍创建项目以及项目结构
+本篇主要介绍搭建工作以及部分配置，不会着重介绍创建项目以及项目结构
 :::
 
 <br>
@@ -21,6 +21,13 @@
 :::
 
 ### 创建 VitePress
+
+<br>
+
+##### 创建目录
+
+1. 进入你的工作目录，创建一个文件夹，比如 `vitepress-doc`
+2. 进入 `vitepress-doc`
 
 ::: code-group
 
@@ -38,13 +45,33 @@ npm add -D vitepress
 
 :::
 
+3. 初始化向导
+
+::: code-group
+
+```sh [pnpm]
+pnpm vitepress init
+```
+
+```sh [yarn]
+yarn vitepress init
+```
+
+```sh [npm]
+npx vitepress init
+```
+
+:::
+此时你的目录应该是这样的
+![初始化vitepress](/public/初始化vitepress.png)
+
 ### 部署到 GitHub
 
 上传 github 前，先在项目根目录下创建`.github/workflows/deploy.yml`文件
 ::: tip 提示
 在此之前，可以先看看[GitHub Actions 工作流自动化的入门核心](https://www.bilibili.com/video/BV1aT421y7Ar/?vd_source=e36103031144dca10ac67f24e861ac18)这个视频，有助于理解接下来的代码
 <br>
-当然，我是从vitepress官网直接复制的，嘿嘿嘿
+当然，我是从 vitepress 官网直接复制的，嘿嘿嘿
 :::
 
 ```yaml
