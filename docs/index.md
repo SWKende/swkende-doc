@@ -34,3 +34,6 @@ features:
     link: /guide/what-is-vitepress
     linkText: more
 ---
+
+<confetti />
+<DataPanel />
