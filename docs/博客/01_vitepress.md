@@ -10,8 +10,6 @@
 本篇主要介绍搭建工作以及部分配置，不会着重介绍创建项目以及项目结构
 :::
 
-<br>
-
 ::: tip 参考链接（站在巨人的肩膀上才能看的更远）
 [VitePress 快速上手中文教程](https://vitepress.yiov.top/) —— 实在是太全面了 😍<br>
 [AlbertZhang 的文档站](https://docs.bugdesigner.cn/docs/Tutorial/vitepress.html) —— 原本有 b 站视频的，截至当前发现下架了 😕<br>
@@ -21,10 +19,6 @@
 :::
 
 ### 创建 VitePress
-
-<br>
-
-##### 创建目录
 
 1. 进入你的工作目录，创建一个文件夹，比如 `vitepress-doc`
 2. 进入 `vitepress-doc`
@@ -77,7 +71,7 @@ cache
 ```
 
 :::
-![初始化vitepress](/public/初始化vitepress.png)
+![初始化vitepress](/public/01_vitepress/初始化vitepress.png)
 
 ### 部署到 GitHub
 
@@ -158,3 +152,46 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 ```
+
+::: danger 此时会出现构建失败
+编辑好`.github/workflows/deploy.yml`后，就可以直接上传的到 GitHub 当中啦，但是这个时候肯定会构建失败，因为我们还没有配置 Actions
+:::
+![Actions未设置](/public/01_vitepress/Actions未设置.png)
+
+接下来就需要配置 Actions 了，在`Settting` -> `Pages` -> `Build and deployment` -> `Branch` -> `选择main` -> `Save`<br>
+
+![设置Actions](/public/01_vitepress/设置Actions.png)
+
+接下来等待工作流跑完，这里需要等个几分钟.....<br>
+
+当我们在看到 `Code` 中看到绿点，就说明完成了，让我来打开看看[https://swkende.github.io/vitepress-doc/](https://swkende.github.io/vitepress-doc/)，这里对应你的仓库链接，需要修改一下url
+
+![css丢失情况](/public/01_vitepress/css丢失情况.png)
+::: danger 敲多麻袋
+我样式呢？？？
+:::
+
+咳咳，原来是我没配置 base，导致了打包后丢失 css 样式，小问题，到 `.vitepress` -> `config.mjs` 加一个<br>
+PS：[这里是我写的文档](https://swkende.github.io/vitepress-doc/)，用 vitepress 展示代码还有聚焦效果，简直太帅了
+
+```js{4}
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  base: "/vitepress-doc/",// [!code focus]
+  title: "My Awesome Project",
+  description: "A VitePress Site",
+  themeConfig: {
+    ...
+```
+
+OK，再次上传代码，这次肯定没问题了<br>
+等待几分钟，刷新页面，然后大功告成！
+
+![部署后正常情况](/public/01_vitepress/部署后正常情况.png)
+
+::: tip 最后
+当然这里这是简单的说明如何部署，还没介绍怎么配置，怎么美化之类的，修行之路靠个人，而如今，<strong>你已经在道路上了</strong><br>
+[Demo 文档站](https://swkende.github.io/vitepress-doc/) —— 文章中的示例 DEMO<br>
+[SWKende 的文档站](https://vitepress.yiov.top/) —— 我个人的文档站，还在持续更新中
+:::

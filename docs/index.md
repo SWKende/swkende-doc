@@ -11,20 +11,17 @@ hero:
     alt: 背景图
   actions:
     - theme: brand
-      text: 建站教程视频
-      link: https://www.bilibili.com/list/watchlater?oid=966018174&bvid=BV1XW4y1w7bc&spm_id_from=333.1007.top_right_bar_window_view_later.content.click
+      text: VitePress中文文档
+      link: https://vitepress.yiov.top/
     - theme: alt
       text: 建站教程doc
       link: https://docs.bugdesigner.cn/
-    - theme: alt
-      text: 第三方vitepress文档
-      link: https://vitepress.yiov.top/
 
 features:
   - icon: 🛠️
     title: 目标一
     details: 当好螺丝钉
-    link: /guide/what-is-vitepress
+    link: https://www.bilibili.com/video/BV17s4y137DY/?spm_id_from=333.337.search-card.all.click&vd_source=e36103031144dca10ac67f24e861ac18
     linkText: more
   - icon: 🛏️
     title: 目标二
