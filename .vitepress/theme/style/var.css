@@ -44,8 +44,7 @@
     --vp-button-brand-active-border: #F6CEEC;
   } */
 
-
-  /* 提示框 */
+/* 提示框 */
 .custom-block.tip {
   border-color: var(--vp-c-green-2);
 }
@@ -60,4 +59,14 @@
 .custom-block.danger {
   /* border-color: #f43f5e; */
   border-color: var(--vp-c-red-2);
+}
+
+/* .vitepress/theme/style/var.css */
+
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important; /* 给的值是21，但是实测盖不住，直接999 */
 }
