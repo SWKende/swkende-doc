@@ -172,7 +172,7 @@ jobs:
 :::
 
 咳咳，原来是我没配置 base，导致了打包后丢失 css 样式，小问题，到 `.vitepress` -> `config.mjs` 加一个<br>
-PS：[这里是我写的文档](https://swkende.github.io/vitepress-doc/01_博客/01_vitepress.html)，用 vitepress 展示代码还有聚焦效果，简直太帅了
+PS：[这里是我写的文档](https://swkende.github.io/swkende-doc/01_博客/01_vitepress.html)，用 vitepress 展示代码还有聚焦效果，简直太帅了
 
 ```js{4}
 import { defineConfig } from 'vitepress'
