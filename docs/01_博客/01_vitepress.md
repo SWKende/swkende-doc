@@ -193,5 +193,5 @@ OK，再次上传代码，这次肯定没问题了<br>
 ::: tip 最后
 当然这里这是简单的说明如何部署，还没介绍怎么配置，怎么美化之类的，修行之路靠个人，而如今，<strong>你已经在道路上了</strong><br>
 [Demo 文档站](https://swkende.github.io/vitepress-doc/) —— 文章中的示例 DEMO<br>
-[SWKende 的文档站](https://vitepress.yiov.top/) —— 我个人的文档站，还在持续更新中
+[SWKende 的文档站](https://swkende.github.io/swkende-doc/) —— 我个人的文档站，还在持续更新中
 :::
