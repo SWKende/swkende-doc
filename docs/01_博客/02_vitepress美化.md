@@ -124,7 +124,7 @@ hero:
 
 ### Badge 颜色
 
-::: tip
+::: tip 代码部分
 之前有人提到我的这个颜色怎么弄的，其实就是在 `var.css` 加了一些样式
 
 ::: code-group
@@ -155,9 +155,11 @@ hero:
 
 :::
 
+::: info 效果
 再看看你的 badge，是不是漂亮多了，当然你也可以继续优化 `Info` 和 `Details`
 
 ![美化Badge](/02_vitepress美化/美化Badge.png)
+:::
 
 ### 毛玻璃
 
