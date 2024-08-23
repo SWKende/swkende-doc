@@ -35,5 +35,5 @@ features:
     linkText: more
 ---
 
-<confetti />
+<Confetti />
 <DataPanel />

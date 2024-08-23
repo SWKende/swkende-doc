@@ -7,7 +7,7 @@ import { onMounted, watch, nextTick } from "vue";
 import { useRoute } from "vitepress";
 
 // 五彩纸屑
-import confetti from "./components/confetti.vue";
+import Confetti from "./components/Confetti.vue";
 
 // 浏览量-不蒜子
 import { inBrowser } from "vitepress";
@@ -18,7 +18,7 @@ export default {
   extends: DefaultTheme,
   enhanceApp({ app, router }) {
     // 注册全局组件
-    app.component("confetti", confetti);
+    app.component("Confetti", Confetti);
     app.component("DataPanel", DataPanel);
     if (inBrowser) {
       router.onAfterRouteChanged = () => {
