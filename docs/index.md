@@ -11,11 +11,11 @@ hero:
     alt: 背景图
   actions:
     - theme: brand
+      text: 京东云刷机教程
+      link: /04_JDC刷机/00_前言
+    - theme: alt
       text: VitePress中文文档
       link: https://vitepress.yiov.top/
-    - theme: alt
-      text: 建站教程doc
-      link: https://docs.bugdesigner.cn/
 
 features:
   - icon: 🛠️
