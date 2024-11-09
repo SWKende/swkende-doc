@@ -25,8 +25,8 @@ A 是 128g 版本，B 是 64g 版本，网上教程都是 B，我的是 A，教�
 
 1. 京东云一代路由器
 2. CH341A 编程器 + SOP16 转 DIP8 `直接买套餐就行`
-3. 提取软件 TODO
-4. 还原 mac 软件 TODO
+3. 提取和刷写 bios 软件，找商家要也行，你也可以用这个 `/s/1D2W_F1cYGcfQFN35phJdLA 提取码ep17`
+4. 用于提取 eeprom 的 [winhex 软件](https://www.ghxi.com/winhex.html)
 
 ### 提取原厂 Bios 并刷入 Breed
 
@@ -50,6 +50,18 @@ A 是 128g 版本，B 是 64g 版本，网上教程都是 B，我的是 A，教�
 :::
 
 ### 提取 eeprom
+
+1. 打开 `winhex` 软件，将我们提取的原 bios 拖进去，然后点击 `编辑` - `定义选块`
+
+   ![提取eeprom](/JDC刷机/01/提取eeprom-1.png)
+
+2. 定义选块像我这么写，注意别填错
+
+   ![提取eeprom](/JDC刷机/01/提取eeprom-2.png)
+
+3. 最后像这样保存至新文件，命名为 eeprom.bin，大小应该是 64kb
+
+   ![提取eeprom](/JDC刷机/01/提取eeprom-3.png)
 
 ### 进入 Breed 平台刷 eeprom
 
