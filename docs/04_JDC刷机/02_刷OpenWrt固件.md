@@ -18,6 +18,7 @@
 [Padavan 无插件](https://github.com/SWKende/Padavan-build/actions/runs/11182041107/artifacts/2016371629) —— 插件全 no，很精简，12.5m 大小<br>
 [Padavan 全插件](https://github.com/SWKende/Padavan-build/actions/runs/11182517320/artifacts/2016535333) —— 这个我把插件全都 yes，22.6m 大小<br>
 当然刷固件这一步是一样的，只是后续配置系统部分，需要你自行研究了<br>
+PS：Padavan 固件 网盘链接：`/s/1qVhL2aTXG6R2GWivs3tQWg 6398`<br>
 
 <hr>
 
